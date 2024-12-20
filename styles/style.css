@@ -5,8 +5,9 @@ body{
 }
 
 .wrapper{
-    width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -47,10 +48,16 @@ a{
     justify-content: space-between;
     align-items: center;
     padding: 40px;
+    background-image: url(/src/NU\ Background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.8);
 }
-.center-background{
+.center-content{
     background-color: rgba(255,255,255,0.8);
     padding: 20px;
+    
 }
 .button{
     background-color: #35408E;
@@ -66,6 +73,7 @@ a{
 
 /*Footer part*/
 footer{
+    margin-top: auto;
     background-color: #35408E;
     color: #fff;
     padding: 40px;
@@ -77,11 +85,14 @@ footer{
 }
 .links ul{
     list-style-type:none;
-    padding: 0px;
+    padding: 0;
 }
 .links a{
     color: #fff;
     text-decoration: none;
+}
+links li{
+    margin-bottom: 10px;
 }
 
 /*Footer part*/
