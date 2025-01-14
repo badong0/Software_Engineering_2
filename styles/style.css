@@ -35,21 +35,21 @@ body{
   .logo {
     font-size: 36px;
     font-weight: bold;
-    color: #88c0d0; /* Green color for logo */
-    letter-spacing: -1px; /* Slight letter spacing for logo */
+    color: #88c0d0; 
+    letter-spacing: 1px; 
     text-align: center;
   }
   .logo span {
     color: #D4ECDD; /* White color for 'SERVE' part */
   }
 
-  .buttons {
+  .buttons_introduction {
     display: flex;
     padding-right: 80px;
-    
+
   }
 
-  .buttons button {
+  .buttons_introduction button {
     background-color: #fff; /* Blue button color */
     color: black;
     padding: 10px 20px;
@@ -60,8 +60,6 @@ body{
     font-size: 16px;
     
   }
-  
-  /*Header part*/
 
   /*content part*/
   .container {
@@ -107,8 +105,7 @@ body{
     text-align: center;
  }
   
-  
-  /* login Form styles*/
+/* login Form styles*/
 .input-group {
   margin-bottom: 20px;
 }
@@ -191,9 +188,6 @@ p {
   text-decoration: none;
 }
 
-
-
-
 /*image sa gilid ng login*/
 .login-background img{ 
   height: 950px;
@@ -202,4 +196,37 @@ p {
   /*kung ayaw ng stretch and image, ito gamitin na code
   height: 950px;
   width: 100%;  */
+}
+
+
+/*home.html*/
+.home-header{
+  color: #fff; /* White text color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0; left: 0;
+  padding-right: 20px;
+  padding-top: 0px; 
+  background-color: #88c0d0;
+}
+.home-logo {
+  font-size: 36px;
+  font-weight: bold;
+  color: #88c0d0; 
+  letter-spacing: 1px; 
+  text-align: center;
+  
+}
+.home-logo span {
+  color: #D4ECDD; /* White color for 'SERVE' part */
+}
+
+.home_buttons{
+  padding-right: 200px;
+}
+.home_buttons img {
+  margin: 20px;
 }
