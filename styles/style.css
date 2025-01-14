@@ -6,111 +6,151 @@ body{
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #fff; /* Light gray background */
 }
-
-
 .wrapper {
     width: 400px;
+    height: max-content;
     padding: 30px;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 
-
-/*CSS introduction*/
-
-
-
-  /*Introduction.html*/
+/*Introduction.html*/
 
   /*Header css*/
   header {
     color: #fff; /* White text color */
-    padding-top: 20px; 
-    padding-bottom: 20px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     position: fixed;
     top: 0; left: 0; 
+    padding: 40px;
+    padding-top: 20px; 
   }
   .logo {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     color: #88c0d0; /* Green color for logo */
     letter-spacing: -1px; /* Slight letter spacing for logo */
-    padding-left: 20px;
+    
   }
   .logo span {
-    color: #fff; /* White color for 'SERVE' part */
+    color: #D4ECDD; /* White color for 'SERVE' part */
   }
 
   .buttons {
     display: flex;
-    padding-right: 20px;
+    padding-right: 80px;
   }
 
   .buttons button {
-    background-color: #3498db; /* Blue button color */
-    color: #fff;
+    background-color: #fff; /* Blue button color */
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 3px;
     margin-left: 10px;
     cursor: pointer;
+    font-size: 16px;
   }
+  
   /*Header part*/
 
   /*content part*/
   .container {
-    width: 50%;
+    width: 100%;
     padding: 40px;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    height: 500px;
+    text-align:center;
+    height: 700px;  
   }
 
-  .container h1 {
-    margin-bottom: 20px;
+  
+  .introduction_content h1 {
+    margin-bottom: 40px;
+    font-size: 56px;
+    font-weight: bold;
   }
 
-  .container p {
-    font-size: 16px;
-    margin-bottom: 30px;
+  .introduction_content p {
+    margin-bottom: 40px;
+    font-size: 24px;
   }
 
-  .container input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-
-  button {
-    background-color: #4CAF50;
+  .introduction_content button {
+    background-color: #1E1E1E;
     color: white;
     padding: 10px 20px;
     border: none;
-    width: 200px;
-    border-radius: 3px;
+    width: 169px;
+    border-radius: 32px;
     cursor: pointer;
+    text-align: center;
+    font-size: 16px; 
+    font-weight: bold;
   }
 
-  .login-signup {
-    margin-top: 20px;
-  }
 
-  .login-signup a {
-    margin-left: 10px;
-    margin-right: 10px;
-    color: #3498db;
-    text-decoration: none;
-    color: #333;
-  }
+  /*login.html*/
+  
+  /*logo*/
+
+ #login-logo{
+    padding: -40px;
+    text-align: center;
+ }
+  
+  
+  /*Form styles*/
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.sign-in {
+  background-color: #1E1E1E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  width: 100%;
+  border-radius: 32px;
+  cursor: pointer;
+  font-size: 16px; 
+  font-weight: bold;
+}
+
+p {
+  margin-top: 20px;
+}
+
+
+
+.login-background img{
+  height:950px;
+  width: 100%;
+}
