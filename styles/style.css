@@ -14,7 +14,7 @@ body{
     padding: 30px;
     background-color: #fff;
     border-radius: 5px;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -23,7 +23,6 @@ body{
   /*Header css*/
   header {
     color: #fff; /* White text color */
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +37,7 @@ body{
     font-weight: bold;
     color: #88c0d0; /* Green color for logo */
     letter-spacing: -1px; /* Slight letter spacing for logo */
-    
+    text-align: center;
   }
   .logo span {
     color: #D4ECDD; /* White color for 'SERVE' part */
@@ -47,6 +46,7 @@ body{
   .buttons {
     display: flex;
     padding-right: 80px;
+    
   }
 
   .buttons button {
@@ -58,6 +58,7 @@ body{
     margin-left: 10px;
     cursor: pointer;
     font-size: 16px;
+    
   }
   
   /*Header part*/
@@ -107,7 +108,7 @@ body{
  }
   
   
-  /*Form styles*/
+  /* login Form styles*/
 .input-group {
   margin-bottom: 20px;
 }
@@ -132,7 +133,7 @@ body{
   margin-bottom: 20px;
 }
 
-.sign-in {
+.buttons-signin-signup {
   background-color: #1E1E1E;
   color: white;
   padding: 10px 20px;
@@ -142,15 +143,63 @@ body{
   cursor: pointer;
   font-size: 16px; 
   font-weight: bold;
+  text-align: center;
 }
-
 p {
   margin-top: 20px;
 }
 
 
+/*signup form css*/
+.signup-form-group {
+  margin-bottom: 20px;
+}
 
-.login-background img{
-  height:950px;
+.signup-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.signup-form-group input[type="text"],
+.signup-form-group input[type="email"],
+.signup-form-group input[type="password"] {
   width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff; 
+  color: black; 
+}
+
+.signup-checkbox {
+  margin-bottom: 20px;
+}
+
+.signup-checkbox input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.signup-login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: black;
+}
+
+.signup-login-link a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+
+
+
+/*image sa gilid ng login*/
+.login-background img{ 
+  height: 950px;
+  width: 159%;
+  object-fit:fill;
+  /*kung ayaw ng stretch and image, ito gamitin na code
+  height: 950px;
+  width: 100%;  */
 }
