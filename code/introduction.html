@@ -57,9 +57,57 @@
       text-decoration: none;
       color: #333;
     }
+
+
+    /*Header css*/
+    header {
+      /*background-color: #1f2833; /* Dark background color */
+      color: #fff; /* White text color */
+      padding: 25px 100px 75px 20px; /* Top, right, bottom, left padding */
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: fixed;
+      top: 0; left: 0; 
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #88c0d0; /* Green color for logo */
+      letter-spacing: -1px; /* Slight letter spacing for logo */
+    }
+    .logo span {
+      color: #fff; /* White color for 'SERVE' part */
+    }
+
+    .buttons {
+      display: flex;
+    }
+
+    .buttons button {
+      background-color: #3498db; /* Blue button color */
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <div class="logo">DOC<span>SERVE</span></div>
+    <div class="buttons">
+      <button>Log in</button>
+      <button>Sign Up</button>  
+    </div>
+  </header>
+
+ 
+ 
   <div class="container">
     <h1>DocServe</h1>
     <h2>Document Requests in Just a Click!</h2>

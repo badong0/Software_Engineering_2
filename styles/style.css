@@ -1,100 +1,18 @@
+/*CSS as whole*/
 body{
-    background-color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-}
-
-.wrapper{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-
-/*Header CSS*/
-header{
-    background-color: #35408E;
-    color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
-
-}
-.header-yellow{
-    background-color: #FFD41C;
-    height: 10px;
     margin: 0;
+    background-color: #f0f0f0; /* Light gray background */
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-li{
-    list-style-type: none;
-}
-a{
-    color: #fff;
-    text-decoration: none;
-}
-.logo{
-    display: flex;
-    align-items: center;
-}
-/*Header CSS*/
 
-/*Center part*/
-.center-part{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    background-image: url(/src/NU\ Background.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-.center-content{
-    background-color: rgba(255,255,255,0.8);
-    padding: 20px;
-    
-}
-.button{
-    background-color: #35408E;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
+.wrapper {
+    width: 400px;
+    padding: 30px;
+    background-color: #fff;
     border-radius: 5px;
-    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/*Center part*/
-
-
-
-/*Footer part*/
-footer{
-    margin-top: auto;
-    background-color: #35408E;
-    color: #fff;
-    padding: 40px;
-}
-.footer-contents{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 15%;
-}
-.links ul{
-    list-style-type:none;
-    padding: 0;
-}
-.links a{
-    color: #fff;
-    text-decoration: none;
-}
-links li{
-    margin-bottom: 10px;
-}
-
-/*Footer part*/
-
-
