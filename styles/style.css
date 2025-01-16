@@ -105,8 +105,8 @@ header {
   padding: 30px;
   border-radius: 5px;
 }
-.login-content .logo{
-
+.login-container .login-right-panel .logo {
+  text-align: center; /* Center the logo text horizontally in the right panel only*/
 }
 .login-content h2 {
   margin-bottom: 10px;
