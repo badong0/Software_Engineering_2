@@ -66,8 +66,12 @@ header {
 .logo span {
   color: #D4ECDD; 
 }
-/*  */
+/*Reusable code for the DOCSERVE design*/
 
+/*login-signup.html*/
+#login-signup-body{
+  background-image: url("/Software_Engineering_2/src/rb_2148303920\ 1.png");
+}
 .login_content{
   background-color: aqua;
   padding: 10px;
