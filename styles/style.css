@@ -8,7 +8,7 @@ body{
 }
 .container {
   max-width: 100%; /* Adjust as needed */
-  max-height: 100%;
+  max-height: auto;
   margin: 0 auto; 
 }
 .wrapper {
@@ -144,3 +144,49 @@ button {
   cursor: pointer;
   width: 100%;
 }
+
+
+/*getstarted.html*/
+/*Top part yung dalawang button*/
+.getstarted-buttons {
+  display: flex;
+  margin-right: 20px;
+}
+
+.getstarted-buttons button {
+  background-color: #D4ECDD; /* Light Green background */
+  color: #1E1E1E; /* Dark Text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  
+}
+
+.getstarted-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 20px;
+}
+.getstarted-content{
+  text-align: center;
+}
+.getstarted-content h1{
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+.getstarted-content p{
+  font-size: 30;
+  margin: 0 auto 30px;
+}
+.getstarted-content button{
+  background-color: 1E1E1E;
+  padding: 15px 30px;
+  font-size: 20px;
+  max-width: 300px;
+}
+
