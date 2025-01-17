@@ -11,11 +11,12 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Make the body take up the full viewport height */
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #fff; /* Light gray background */
   }
   
   /* Header */
   header {
+    height: 93px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,11 +70,11 @@
   
 /* Wrapper */
 .wrapper {
-    background-color: #fff;
+    background-color: transparent;
     padding: 40px;
-     /* Add this line to make the wrapper take up 100% width */
-    margin: 0 auto; /* Center the wrapper horizontally */
-    height: 980px;
+    width: 700;
+    height: 800;
+    text-align: center;
   }
   
   /* Get Started Content */
@@ -100,3 +101,63 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
+
+  /*Home.html css*/
+  nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info p {
+    margin-right: 10px;
+}
+
+.user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.container {
+    text-align: center;
+  }
+  
+  .container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333; /* Dark gray text color */
+  }
+  
+  .container p {
+    font-size: 1.2rem;
+    color: #666; 
+    margin-bottom: 30px;
+  }
+.container button{
+    font-size: 16px;
+    font-weight:500;
+    background-color: #112D4E;
+    color: #fff;
+    width: 209px;
+    height: 52px;
+}
