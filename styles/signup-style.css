@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Reusable code for the DOCSERVE LOGO design*/
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  color: black; 
+  letter-spacing: 1px; 
+  font-family: 'poppins';
+
+}
+.logo span {
+  color: #3F72AF; 
+}
+
+body {
+    font-family: "inter";
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/Software_Engineering_2/src/Background-signin-signup.png);
+}
+
+
+/*Button Sign in sign up sa taas */
+.button-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.button-container a {
+  display: block;
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 175px;
+}
+
+.button-container a:hover {
+  background-color: #eee;
+}
+
+.button-container a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/*containers*/
+.login-signup-container .logo,
+.login-signup-container h2,
+#logo-motto  {
+  text-align: center;
+  margin-bottom: 10px; 
+}
+.login-signup-container {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 5px;
+    width: 800px; /* Adjust width as needed */
+    text-align: center;   
+}
+.login-signup-container button{
+  margin-top: 20px;
+}
+.user-category {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-category input[type="radio"] {
+  margin-left: 5px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group #gender {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #EDF2F7;
+}
+.form-group .date{
+
+}
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none; /* For Safari */
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 16 16'><path fill='%23333' d='M4 7 L8 11 L12 7 z'/><path fill='none' stroke='%23333' stroke-width='1' d='M2 7 L14 7'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.form-group p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.form-group label {
+  font-size: 14px;
+
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-row .form-group:last-child {
+    margin-right: 0;
+}
+
+.terms-and-conditions {
+  margin-top: 20px; /* Adjust margin as needed */
+  text-align: center;
+}
+
+.terms-and-conditions label {
+  font-size: 14px;
+  color: #666; /* Adjust color as needed */
+}
+
+.terms-and-conditions a {
+  color: #007bff; /* Adjust link color as needed */
+  text-decoration: none;
+}
+
+.login-signup-container button{
+  margin: 30px;
+  background-color: #112D4E;
+  color: #ffffff;
+  border-radius: 4px;
+  height: 48px;
+  width: 424px;
+  text-align: center;
+}
+
+
+/*login-container*/

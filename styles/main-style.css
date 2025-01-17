@@ -1,0 +1,102 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Use a sans-serif font for better readability */
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Make the body take up the full viewport height */
+    background-color: #f0f0f0; /* Light gray background */
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Add padding to the header */
+    background-color: #f8f9fa; /* Light gray background for header */
+    width: 100%; /* Make the header full width */
+    position: fixed; /* Position the header fixed at the top */
+    top: 0; /* Position the header at the top of the page */
+    left: 0;
+    z-index: 1; /* Ensure the header is on top of other elements */
+  }
+  
+  .logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .logo span {
+    color: #007bff;
+  }
+  
+  .getstarted-buttons {
+    display: flex;
+  }
+  
+  .getstarted-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .getstarted-buttons a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .getstarted-buttons button:first-child {
+    background-color: transparent;
+    border: 1px solid #ccc;
+  }
+  
+  /* Main Container */
+  .main-container {
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Set a maximum width */
+    margin-top: 80px; /* Adjust top margin to account for fixed header */
+  }
+  
+/* Wrapper */
+.wrapper {
+    background-color: #fff;
+    padding: 40px;
+     /* Add this line to make the wrapper take up 100% width */
+    margin: 0 auto; /* Center the wrapper horizontally */
+    height: 980px;
+  }
+  
+  /* Get Started Content */
+  .getstarted-content {
+    text-align: center;
+  }
+  
+  .getstarted-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .getstarted-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .getstarted-content button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
