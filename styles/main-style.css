@@ -161,3 +161,115 @@ nav ul li a {
     width: 209px;
     height: 52px;
 }
+
+/*Profile.html*/
+
+/* Settings Page Styles */
+.sidebar {
+  margin-top: 100px;
+  width: 250px; /* Adjust width as needed */
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.sidebar a:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar .active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.content-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: left;
+  margin-top: 50px;
+  height: 100vh; /* Make content container fill the screen height */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #007bff;
+}
+
+.user-profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 40%;
+  margin-right: 20px;
+  padding: 20px;
+}
+.user-profile h2{
+  margin-right: 20px;
+}
+
+.user-information {
+  margin-top: 20px;
+}
+
+.user-information h2 {
+  margin-bottom: 10px;
+}
+
+.user-information div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.user-information div label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.user-address {
+  margin-top: 20px;
+}
+
+.user-address h2 {
+  margin-bottom: 10px;
+}
+
+.user-address table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-address th, .user-address td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
