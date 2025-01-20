@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>DocServe</title>
-    <link rel="stylesheet" href="/styles/signin-style.css">
+    <link rel="stylesheet" href="../styles/signin-style.css">
 </head>
 <body>
 
@@ -23,11 +24,11 @@
         <form action="" method="" enctype="">
             <div class="email-box">
                 <label>Email</label>
-                <div class="box" contenteditable="true">Enter Email</div>
+                <div class="box" contenteditable="true"></div>
             </div>
             <div class="password-box">
                 <label>Password</label>
-                <div class="box" contenteditable="true">Enter Password</div>
+                <div class="box" contenteditable="true"></div>
             </div>
 
             <div class="forgot-password">

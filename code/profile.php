@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Profile</title>
-    <link rel="stylesheet" href="/styles/main-style.css">
+    <link rel="stylesheet" href="../styles/main-style.css">
 
 </head>
 <body>

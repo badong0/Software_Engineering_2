@@ -5,7 +5,7 @@
 <head>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>DocServe</title>
-    <link rel="stylesheet" href="/styles/signup-style.css">
+    <link rel="stylesheet" href="../styles/signup-style.css">
 </head>
 <body>
 
