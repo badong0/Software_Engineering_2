@@ -1,28 +1,35 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About</title>
     <link rel="stylesheet" href="/styles/main-style.css">
 </head>
 <body>
     <header>
+        <nav>
+            <ul>
+                <li><a href="code/about.html">About</a></li>
+                <li><a href="code/GetStarted.html">Home</a></li>
+            </ul>
+        </nav>
         <div class="logo">
             <div>DOC<span>SERVE</span></div>
         </div>
-        <div class="getstarted-buttons">
-            <a href="/code/login-signup.html"><button>Log In</button></a>
-            <a href="/code/login-signup.html"><button style="background-color: #CEDEED;">Sign Up</button></a>
-        </div>  
+
+        <div class="user-info">
+            <p>Welcome, <span>John Doe</span></p>
+            <a href="/code/profile.html"><img src="user_image.jpg" alt=""></a> 
+        </div>
     </header>
     <div class="main-container"> 
         <div class="wrapper">
             <div class="getstarted-container">
                 <div class="getstarted-content">
-                    <h1>Document Requests in Just a Click!</h1>
-                    <p>"No more waiting in long lines; experience quick and reliable service today!"</p>
-                    <button>Get Started</button>
+                    <h1>About</h1>
                 </div>
             </div>
         </div>

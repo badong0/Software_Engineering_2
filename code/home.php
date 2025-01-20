@@ -1,12 +1,13 @@
+<?php
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/styles/main-style.css">
+
 </head>
-<body>
+<body style="background-image: url(/src/Home-background.png);">
     <header>
         <nav>
             <ul>
@@ -23,12 +24,12 @@
             <a href="/code/profile.html"><img src="user_image.jpg" alt=""></a> 
         </div>
     </header>
-    <div class="main-container"> 
+    <div class="container"> 
         <div class="wrapper">
-            <div class="getstarted-container">
-                <div class="getstarted-content">
-                    <h1>About</h1>
-                </div>
+            <div class="content">
+                <h1>Ask any document regarding your needs</h1>
+                <p>On this page you can request any type of document that you want.</p>
+                <button>Request Document</button>
             </div>
         </div>
     </div>
