@@ -11,7 +11,10 @@
   color: black; 
   letter-spacing: 1px; 
   font-family: 'poppins';
-
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .logo span {
   color: #3F72AF; 
@@ -33,7 +36,6 @@ body {
 .button-container {
   display: flex;
   justify-content: center;
-  
 }
 
 .button-container a {
@@ -41,7 +43,6 @@ body {
   padding: 15px 30px;
   text-decoration: none;
   color: #333;
-  border: 1px solid #ccc;
   border-radius: 5px;
   width: 175px;
 }
