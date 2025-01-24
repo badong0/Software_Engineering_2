@@ -337,3 +337,54 @@ p[contenteditable="true"]:focus {
     border: 1px dashed #007bff;
     background-color: #f8f9fa;
 }
+
+
+/*password&security css*/
+form {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+form p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+form .form-group {
+  margin-bottom: 20px;
+}
+
+form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
+
+form .save-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form .save-button:hover {
+  background-color: #0056b3;
+}
