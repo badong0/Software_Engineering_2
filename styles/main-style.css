@@ -16,7 +16,7 @@
   
   /* Header */
   header {
-    height: 93px;
+    height: 95px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,8 +29,6 @@
     z-index: 1; /* Ensure the header is on top of other elements */
   }
   
-
-
   .logo {
     font-size: 36px;
     font-weight: bold;
@@ -40,7 +38,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  
   .logo span {
     color: #007bff;
   }
@@ -124,10 +121,7 @@ nav ul li a {
     color: #333;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
+
 
 .user-info {
     display: flex;
@@ -320,10 +314,6 @@ input[type="file"] {
   display: none; /* Hidden file input */
 }
 
-.profile-name-container{
-  
-}
-
 h2[contenteditable="true"],
 p[contenteditable="true"] {
     border: 1px dashed transparent;
@@ -387,4 +377,15 @@ form .save-button {
 
 form .save-button:hover {
   background-color: #0056b3;
+}
+
+
+
+/*Documentrequest.html*/
+.top-part{
+  position:static;
+  align-items: flex-start; /* Align text to the left */
+  background-color: #112031;
+  width: 100%;
+  text-align: left;
 }

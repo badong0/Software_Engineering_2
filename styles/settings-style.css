@@ -7,7 +7,6 @@
   }
   
   body {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,11 +172,6 @@
 .profile-info h1{
   font-size: 24px;
 }
-
-
-
-
-
 
 
 

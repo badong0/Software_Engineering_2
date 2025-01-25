@@ -3,35 +3,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
-    <link rel="stylesheet" href="../styles/main-style.css">
+    <title>Document Request Form</title>
+    <link rel="stylesheet" href="../styles/document-style.css">
+    <script>
+        
+        function showSection(sectionId) {
+            // Hide all sections
+            document.getElementById('document-request').style.display = 'none';
+            document.getElementById('document-status').style.display = 'none';
 
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Remove 'active' class from all navigation buttons
+            const navLinks = document.querySelectorAll('.navigation-buttons a');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Add 'active' class to the clicked button
+            const activeLink = document.querySelector(`[onclick="showSection('${sectionId}')"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+    </script>
 </head>
-<body style="background-image: url(/src/Home-background.png);">
+<body>
     <header>
         <nav>
             <ul>
-                <li><a href="code/about.html">About</a></li>
-                <li><a href="code/GetStarted.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Team</a></li>
             </ul>
         </nav>
-        <div class="logo">
-            <div>DOC<span>SERVE</span></div>
-        </div>
-
-        <div class="user-info">
-            <p>Welcome, <span>John Doe</span></p>
-            <a href="/code/profile.html"><img src="" alt=""></a> 
+            <div class="logo">DOC<span>SERVE</span></div>
+            <div class="user-info">
+            <p>Welcome, <span>Louis Partridge</span></p>
+            <img src="user-profile.jpg" alt="User Profile">
         </div>
     </header>
-    <div class="container"> 
+    <div class="container">
         <div class="wrapper">
+            <div class="top-part">
+                <h1>Document Request Form</h1>
+            </div>
+                
             <div class="content">
-                <h1>Ask any document regarding your needs</h1>
-                <p>On this page you can request any type of document that you want.</p>
-                <button>Request Document</button>
+                
+                <div class="tab-navigation">
+                    <div class="navigation-buttons">
+                        <a href="#" class="active" onclick="showSection('document-request')">Document Request</a>
+                        <a href="#" onclick="showSection('document-status')">Status</a>
+                    </div>
+                    <div class="navigation-search-bar">
+                        <form action="search.php" method="GET">
+                            <input type="text" name="query" placeholder="Search documents...">
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="document-request" class="document-request">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Filename</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="/src/Doc.png" alt="Good Moral Icon"> Good Moral
+                                </td>
+                                <td>Proof of good moral standing for academic or employment purposes</td>
+                                <td>PHP 100.00</td>
+                                <td><button class="request-button">Request</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="diploma-icon.png" alt="Diploma Icon"> Diploma
+                                </td>
+                                <td>An official document certifying completion of a degree or academic program</td>
+                                <td>PHP 100.00</td>
+                                <td><button class="request-button">Request</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div id="document-status" class="document-status" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date Requested</th>
+                                <th>File Name</th>
+                                <th>Status</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-10-27</td>
+                                <td>Good Moral</td>
+                                <td><span class="status in-progress">In Progress</span></td>
+                                <td>PHP 100.00</td>
+                                <td><button class="download-button">Download</button></td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-27</td>
+                                <td>Diploma</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td>PHP 100.00</td>
+                                <td><button class="download-button">Download</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
+
     </div>
 </body>
 </html>
