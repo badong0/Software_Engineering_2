@@ -258,9 +258,7 @@ input[type="file"] {
   display: none; /* Hidden file input */
 }
 
-.profile-name-container{
-  
-}
+
 
 h2[contenteditable="true"],
 p[contenteditable="true"] {

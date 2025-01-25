@@ -1,217 +1,163 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $response = [];
-
-    // Handle Profile Photo Upload
-    if (isset($_FILES['profile_photo']) && $_FILES['profile_photo']['error'] === UPLOAD_ERR_OK) {
-        $uploadDir = 'uploads/';
-        $uploadFile = $uploadDir . basename($_FILES['profile_photo']['name']);
-        
-        // Move uploaded file
-        if (move_uploaded_file($_FILES['profile_photo']['tmp_name'], $uploadFile)) {
-            $response['profile_photo'] = 'Profile photo uploaded successfully.';
-        } else {
-            $response['profile_photo'] = 'Failed to upload profile photo.';
-        }
-    }
-
-    // Handle Name and Designation
-    $name = htmlspecialchars($_POST['name']);
-    $designation = htmlspecialchars($_POST['designation']);
-
-    // Save to a text file (or replace this with database saving logic)
-    file_put_contents('user_data.txt', "Name: $name\nDesignation: $designation\n");
-
-    $response['name'] = 'Name and designation saved successfully.';
-
-    // Return response
-    echo json_encode($response);
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Profile</title>
-    <link rel="stylesheet" href="../styles/main-style.css">
-
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Profile Testing</title>
+    <link rel="stylesheet" href="../savegame/settings-style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="/code/about.html">About</a></li>
-                <li><a href="/code/GetStarted.html">Home</a></li>
-            </ul>
-        </nav>
-        <div class="logo">
-            <div>DOC<span>SERVE</span></div>
+        <div>
+            <h2>Settings</h2>
         </div>
-
+        
         <div class="user-info">
             <p>Welcome, <span>John Doe</span></p>
             <a href="/code/profile.html"><img src="user_image.jpg"></a> 
         </div>
     </header>
+
+    
     <div class="container"> 
         <div class="wrapper">
-
-            <div class="sidebar">
-                <h1>Settings</h1>
-                <ul>
-                    <li><a href="/code/profile.html" class="active">Profile</a></li>
-                    <li><a href="/code/history.html">History</a></li>
-                    <li><a href="/code/password-security.html">Password & Security</a></li>
-                </ul>
-                <a href="/code/signin.html" style="margin-top: 20px;">Logout</a>
+            <div class="profile-top">
+                <div class="cover">
+                    <input type="file" id="cover-photo" accept="image/jpg,png">
+                </div>
+                <div class="profile-picture">
+                    <img src="/src/default.png" alt="Profile Picture" >
+                    <input type="file" id="profile-upload" name="profile_photo" accept="image/*" style="display: none;" onchange="previewImage(event)">
+                </div>
+                <div class="profile-info">
+                    <h1>Louis Partridge</h1>
+                    <p>Student</p>
+                </div>
             </div>
-        
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#" class="active">Edit Profile</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Password & Security</a></li>
+                    <li><a href="#">Billings</a></li>
+                </ul>
+            </div>
 
-        
-                <form action="process_profile.php" method="POST" enctype="">
-                    <div class="content-container">
-                        <div class="user-profile">
-                            <div class="profile-photo-container">
-                                <img src="user-profile.jpg" alt="User Picture" id="profile-picture">
-                                <label for="profile-upload" class="edit-photo-button">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i> <!-- Optional Icon -->
-                                </label>
-                                <input type="file" id="profile-upload" name="profile_photo" accept="image/*" style="display: none;" onchange="previewImage(event)">
-                            </div>
-                            <div class="profile-name-container">
-                                <!-- if you want to be freely edit without the edit button
-                                <h2 contenteditable="true" id="name-display">Louis Partridge</h2>
-                                <p contenteditable="true" id="designation-display">Student</p>
-                                -->
-                                <h2 id="name-display">Louis Partridge</h2>
-                                <p id="designation-display">Student</p>
-                            </div>
-                        </div>
+            <div class="content">
+                <!-- Edit Profile Form -->
+                <form class="edit-profile">
+                    <h2>Edit Profile</h2>
+                    <p>Manage and update your personal information.</p>
+                    <div class="form-group">
                         
-                    <div class="user-information">
-                        <h2>Edit Profile</h2>
-                        <p>Manage and update your personal information</p>
-        
-                        <!-- Personal Information -->
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="first-name">First Name</label>
-                                <input type="text" id="first-name" name="first_name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="middle-name">Middle Name</label>
-                                <input type="text" id="middle-name" name="middle_name">
-                            </div>
+                        <div>
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" placeholder="Enter Value">
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="last-name">Surname</label>
-                                <input type="text" id="last-name" name="last_name" placeholder="Enter Value" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
+                        <div>
+                            <label for="middle-name">Middle Name</label>
+                            <input type="text" id="middle-name" placeholder="Enter Value">
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="dob">Date of Birth</label>
-                                <input type="date" id="dob" name="dob" placeholder="Enter Value" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="gender">Gender</label>
-                                <select id="gender" name="gender" required>
-                                    <option value="">Select</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="age">Age</label>
-                                <input type="number" id="age" name="age" placeholder="Enter Value" required>
-                            </div>
+
+                        <div>
+                            <label for="surname">Surname</label>
+                            <input type="text" id="surname" placeholder="Enter Value">
                         </div>
-        
-                        <!-- Address -->
-                        <h2>Address</h2>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="house-no">House No:</label>
-                                <input type="text" id="house-no" name="house_no" placeholder="Enter Value">
-                            </div>
-                            <div class="form-group">
-                                <label for="street">Street</label>
-                                <input type="text" id="street" name="street" placeholder="Enter Value">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="barangay">Barangay</label>
-                                <input type="text" id="barangay" name="barangay" placeholder="Enter Value">
-                            </div>
-                            <div class="form-group">
-                                <label for="city">City/Municipality</label>
-                                <input type="text" id="city" name="city" placeholder="Enter Value">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="postal-code">Postal Code</label>
-                                <input type="text" id="postal-code" name="postal_code" placeholder="Enter Value">
-                            </div>
-                            <div class="form-group">
-                                <label for="province">Province</label>
-                                <select id="province" name="province">
-                                    <option value="">Select</option>
-                                    <!-- Add province options here -->
-                                </select>
-                            </div>
-                        </div>
-        
-                        <button type="submit" class="save-button">Save</button>
-                        
                     </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Enter Email">
+                        </div>
+                        <div>
+                            <label for="gender">Gender</label>
+                            <select id="gender">
+                                <option>Select</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="year">Date of Birth</label>
+                            <input type="int" id="year" placeholder="Year">
+                        </div>
+                        <div>
+                            <label for="month"> </label>
+                            <select id="month">
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>September</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="day"> </label>
+                            <input type="int" id="day" placeholder="Day">
+                        </div>
+                        <div>
+                            <label for="age">Age</label>
+                            <select id="age">
+                                <option>Select</option>
+                                <option>18-25</option>
+                                <option>26-35</option>
+                                <option>36-50</option>
+                            </select>
+                        </div>
+                    </div>
+                <button type="button" class="save-btn">Save</button>
                 </form>
+          
+                <hr>
+          
+                <!-- Address Form -->
+                <form class="address">
+                    <h2>Address</h2>
+                    <div class="form-group">
+                        <div>
+                            <label for="house-no">House No.</label>
+                            <input type="text" id="house-no" placeholder="Enter Value">
+                        </div>
+                        <div>
+                            <label for="street">Street</label>
+                            <input type="text" id="street" placeholder="Enter Value">
+                        </div>
+                        <div>
+                            <label for="barangay">Barangay</label>
+                            <input type="text" id="barangay" placeholder="Enter Value">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                        <label for="city">City/Municipality</label>
+                        <input type="text" id="city" placeholder="Enter Value">
+                        </div>
+                        <div>
+                            <label for="province">Province</label>
+                            <select id="province">
+                                <option>Select</option>
+                                <option>Province 1</option>
+                                <option>Province 2</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="postal-code">Postal Code</label>
+                            <input type="text" id="postal-code" placeholder="Enter Value">
+                        </div>
+                    </div>
+                <button type="submit" class="save-btn">Save</button>
+                </form>
+            </div>
+        </div>
     </div>
-
-    <script>
-// Live Preview for Profile Photo
-function previewImage(event) {
-    const reader = new FileReader();
-    reader.onload = function () {
-        const output = document.getElementById('profile-picture');
-        output.src = reader.result;
-    };
-    reader.readAsDataURL(event.target.files[0]);
-}
-
-// Save Changes Button
-document.getElementById('save-button').addEventListener('click', function () {
-    const name = document.getElementById('name-display').textContent;
-    const designation = document.getElementById('designation-display').textContent;
-
-    // Create a FormData object to handle the file and text data
-    const formData = new FormData();
-    const fileInput = document.getElementById('profile-upload');
-    if (fileInput.files[0]) {
-        formData.append('profile_photo', fileInput.files[0]);
-    }
-    formData.append('name', name);
-    formData.append('designation', designation);
-
-    // Send the data to PHP
-    fetch('process_changes.php', {
-        method: 'POST',
-        body: formData,
-    })
-        .then((response) => response.text())
-        .then((data) => {
-            alert(data); // Notify the user
-        })
-        .catch((error) => {
-            console.error('Error saving changes:', error);
-        });
-});
-
-    </script>
 </body>
 </html>
