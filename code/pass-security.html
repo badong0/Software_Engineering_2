@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../styles/settings-style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h2>Settings</h2>
+        </div>
+        <div class="user-info">
+            <p>Welcome, <span>Louis Partridge</span></p>
+            <a href="#"><img src="/Software_Engineering_2/src/default.png" alt="Profile"></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="wrapper">
+            
+            <!-- Profile Section -->
+            <div class="profile-top">
+                <div class="cover">
+                    <input type="file" id="cover-photo" accept="image/jpg,png">
+                </div>
+                <div class="profile-picture">
+                    <img src="/Software_Engineering_2/src/default.png" alt="Profile Picture">
+                    <input type="file" id="profile-upload" name="profile_photo" accept="image/*" style="display: none;" onchange="previewImage(event)">
+                </div>
+                <div class="profile-info">
+                    <h1>Louis Partridge</h1>
+                    <p>Student</p>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Edit Profile</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#" class="active">Password & Security</a></li>
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+                <form class="edit-profile">
+                    <h2>Account Security</h2>
+                    <p>Change your password here</p>
+
+                    <div class="form-group">
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Enter Email">    
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" placeholder="Enter current password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" placeholder="Enter new password">
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" placeholder="Re-type new password">      
+                        </div>
+                    </div>
+                    <button type="submit" class="save-btn">Change Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

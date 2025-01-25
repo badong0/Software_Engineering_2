@@ -147,7 +147,7 @@
 }
 .cover {
     max-width: 100%;
-    margin-top: 30px;
+    margin-top: 95px;
     height: 146px;
     background-color: #546e7a;
     position: relative;
@@ -346,4 +346,39 @@ hr {
   margin: 40px 0;
   border: none;
   border-top: 1px solid #eee;
+}
+
+
+/*table sa history.html*/
+/* Table Styles */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.history-table th, 
+.history-table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.history-table th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+}
+
+.history-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.history-table tr:hover {
+    background-color: #e9f1ff;
+}
+
+.history-table td {
+    color: #555;
 }

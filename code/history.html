@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Settings - History</title>
+    <link rel="stylesheet" href="../styles/settings-style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h2>Settings</h2>
+        </div>
+        <div class="user-info">
+            <p>Welcome, <span>Louis Partridge</span></p>
+            <a href="#"><img src="/Software_Engineering_2/src/default.png" alt="Profile"></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="wrapper">
+            
+            <!-- Profile Section -->
+            <div class="profile-top">
+                <div class="cover">
+                    <input type="file" id="cover-photo" accept="image/jpg,png">
+                </div>
+                <div class="profile-picture">
+                    <img src="/Software_Engineering_2/src/default.png" alt="Profile Picture">
+                    <input type="file" id="profile-upload" name="profile_photo" accept="image/*" style="display: none;" onchange="previewImage(event)">
+                </div>
+                <div class="profile-info">
+                    <h1>Louis Partridge</h1>
+                    <p>Student</p>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Edit Profile</a></li>
+                    <li><a href="#" class="active">History</a></li>
+                    <li><a href="#">Password & Security</a></li>
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+                <h2>History</h2>
+                <p>All requested files will be seen here.</p>
+                
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Date Requested</th>
+                            <th>Filename</th>
+                            <th>Price</th>
+                            <th>Date Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-11-17</td>
+                            <td>Good Moral</td>
+                            <td>$50</td>
+                            <td>2024-11-17 21:21:53</td>
+                        </tr>
+                        <tr>
+                            <td>2024-11-17 21:21:53</td>
+                            <td>Certificate of Registration</td>
+                            <td>$100</td>
+                            <td>2024-11-17 21:21:53</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
