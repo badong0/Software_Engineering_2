@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <title>DocServe</title>
+    <link rel="stylesheet" href="../styles/combine.css">
+    <script>
+        function showTab(tabId) {
+            // Hide both sections
+            document.getElementById('sign-in').style.display = 'none';
+            document.getElementById('sign-up').style.display = 'none';
+
+            // Remove active class from both buttons
+            document.querySelectorAll('.button-container a').forEach((el) => el.classList.remove('active'));
+
+            // Show the selected tab
+            document.getElementById(tabId).style.display = 'block';
+
+            // Add active class to the selected button
+            const activeButton = document.querySelector(`[onclick="showTab('${tabId}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body style="background-image: url(/src/Background-signin-signup.png); background-repeat: no-repeat;">
+    <div class="login-signup-container">
+        <div class="logo">DOC<span>SERVE</span></div>
+        
+        <div class="button-container">
+            <a href="#" class="active" onclick="showTab('sign-in')">Sign In</a>
+            <a href="#" onclick="showTab('sign-up')">Sign Up</a>
+        </div>
+
+        <!-- Sign In Form -->
+        <div id="sign-in" style="display: block;">
+            <h2>Welcome Back!</h2>
+            <p id="logo-motto">Enter your details to access your account.</p>
+            <form action="/phpcode/signin.php" method="POST">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Type your e-mail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Type your password" required>
+                </div>
+
+                <a id="forget-password" href="#">Forgot Password?</a>
+
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="sign-up" style="display: none;">
+            <h2>Create Account</h2>
+            <p id="logo-motto">Let's set you up! Fill in the details below to get started.</p>
+            <form action="/phpcode/signup.php" method="POST">
+                <div class="user-category">
+                    <input type="radio" id="student" name="user_category" value="Student" required>
+                    <label for="student">Student</label>
+                    <input type="radio" id="employee" name="user_category" value="Employee" required>
+                    <label for="employee">Employee</label>
+                    <input type="radio" id="non-employee" name="user_category" value="Non-Employee" required>
+                    <label for="non-employee">Non-Employee</label>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First name</label>
+                        <input type="text" id="first-name" name="first_name" placeholder="Enter your First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="middle-name">Middle name</label>
+                        <input type="text" id="middle-name" name="middle_name" placeholder="Enter your Middle Name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="last-name">Last name</label>
+                        <input type="text" id="last-name" name="last_name" placeholder="Enter your Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Type your e-mail" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Type your password" minlength="8" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password" minlength="8" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="date-of-birth">Date of Birth</label>
+                    <input type="date" id="date-of-birth" name="date_of_birth" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="0" max="120" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="terms-and-conditions">
+                    <input type="checkbox" id="termsCheckbox" name="terms" required>
+                    <label for="termsCheckbox">
+                        By creating an account, you agree to the <a href="#">Terms and Conditions</a>, and our <a href="#">Privacy Policy</a>.
+                    </label>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
