@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>DocServe</title>
+    <link rel="stylesheet" href="../styles/signup-style.css">
+</head>
+<body style="background-image: url(/src/Background-signin-signup.png); background-repeat: no-repeat;">
+    <div class="login-signup-container">
+        <div class="logo">DOC<span>SERVE</span></div>
+        <h2>Create Account</h2>
+        <p id="logo-motto">Let's set you up! Fill in the details below to get started.</p>
+        
+        <div class="button-container">
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html" class="active">Sign Up</a>
+        </div>
+
+        <!-- Start of the form -->
+        <form action="/phpcode/" method="POST">
+
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first-name">First name</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="Enter your First Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="middle-name">Middle name</label>
+                    <input type="text" id="middle-name" name="middle_name" placeholder="Enter your Middle Name">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last name</label>
+                    <input type="text" id="last-name" name="last_name" placeholder="Enter your Last Name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="year">Birthdate</label>
+                    <input type="text" id="year" name="year" placeholder="Year" required>
+                </div>
+                <div class="form-group">
+                    <label for="month"> </label>
+                    <select id="month" name="month" required>
+                        <option value="january">January</option>
+                        <option value="february">February</option>
+                        <option value="march">March</option>
+                        <option value="april">April</option>
+                        <option value="may">May</option>
+                        <option value="june">June</option>
+                        <option value="july">July</option>
+                        <option value="august">August</option>
+                        <option value="september">September</option>
+                        <option value="october">October</option>
+                        <option value="november">November</option>
+                        <option value="december">December</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="day"> </label>
+                    <input type="text" id="day" name="day" placeholder="Day" required>
+                </div>     
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="text" id="age" name="age" placeholder="Your age" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label for="female">Female</label>
+                </div>
+                <div class="user-category">
+                    <label>User Category</label>
+                    <input type="radio" id="student" name="user_category" value="Student" required>
+                    <label for="student">Student</label>
+    
+                    <input type="radio" id="employee" name="user_category" value="Employee" required>
+                    <label for="employee">Employee</label>
+    
+                    <input type="radio" id="non-employee" name="user_category" value="Non-Employee" required>
+                    <label for="non-employee">Non-Employee</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Type your e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Your password" minlength="8" required>
+                    <p>Must be 8 characters at least</p>
+                </div>
+            </div>
+
+
+            <button type="submit">Submit</button>
+        </form>
+        <!-- End of the form -->
+    </div>
+</body>
+</html>
