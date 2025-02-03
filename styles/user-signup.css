@@ -129,9 +129,14 @@
       background-color: #fff;
       padding: 30px;
       border-radius: 10px;
+<<<<<<< HEAD
       width: 800px; /* Adjust width as needed */
       text-align: center;
          
+=======
+      width: 1000px; /* Adjust width as needed */
+      text-align: center;   
+>>>>>>> f0076263f12a40781ca6f5a6ea1652cfbdc29887
   }
   .documents-content button{
     margin-top: 20px;
@@ -162,7 +167,10 @@
   gap: 5px;
   padding: 10px;
 }
-
+.radio-options label{
+  font-size: 14px;
+  font-weight: normal;
+}
 
   .form-group {
       margin-bottom: 5px;
@@ -228,3 +236,19 @@
     text-decoration: none;
   }
   
+<<<<<<< HEAD
+=======
+  .login-signup-container button{
+    margin: 30px;
+    background-color: #112D4E;
+    color: #ffffff;
+    border-radius: 4px;
+    height: 48px;
+    width: 424px;
+    text-align: center;
+  }
+  
+  
+  /*login-container*/
+  
+>>>>>>> f0076263f12a40781ca6f5a6ea1652cfbdc29887
