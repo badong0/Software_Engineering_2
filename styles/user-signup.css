@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    
 }
   
   /*Reusable code for the DOCSERVE LOGO design*/
@@ -18,16 +20,80 @@
   }
   
   body {
-      background-color: #f0f0f0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+    background-color: #f9fafc;
+    color: #333;
+    line-height: 1.6;
       background-image: url(/src/user-background-whole.png);
       background-repeat: no-repeat;
+      
   }
   
+  header {
+    height: 95px;
+    background-color: #fff;
+    color: black;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+}
+.container {
+  text-align: center;
+  width: 100%;
+  
+}
+
+/* Wrapper */
+.wrapper {
+  background-color: transparent;
+  width: 700;
+  height: 800px;
+  text-align: center;
+  
+}
+
+.header-buttons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
+  
+  .header-buttons li {
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-buttons li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 0;
+}
+
+/* Underline effect */
+.header-buttons li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: navy;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Active class for clicked tab */
+.header-buttons li.active::after {
+    width: 100%;
+    left: 0;
+}
+
   
   /*Button Sign in sign up sa taas */
   .button-container {
@@ -53,42 +119,53 @@
     color: #fff;
   }
   
-  /*containers*/
-  .login-signup-container .logo,
-  .login-signup-container h2,
+  .documents-content .logo,
+  .documents-content h2,
   #logo-motto  {
     text-align: center;
     margin-bottom: 10px; 
   }
-  .login-signup-container {
+  .documents-content {
       background-color: #fff;
       padding: 30px;
       border-radius: 10px;
       width: 800px; /* Adjust width as needed */
-      text-align: center;   
+      text-align: center;
+         
   }
-  .login-signup-container button{
+  .documents-content button{
     margin-top: 20px;
   }
+  .documents-content button{
+    margin: 10px;
+    background-color: #112D4E;
+    color: #ffffff;
+    border-radius: 4px;
+    height: 48px;
+    width: 424px;
+    text-align: center;
+  }
+
 /* Radio Button Group Styling */
 /* Radio Button Groups */
 .radio-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 5px;
+    gap: 20px;
 }
 
 .radio-options {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+  padding: 10px;
 }
 
 
   .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 5px;
   }
   
   .form-group input[type="text"],
@@ -106,7 +183,7 @@
   
   .form-group select {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ccc;
       border-radius: 3px;
       appearance: none; /* Remove default arrow */
@@ -117,7 +194,7 @@
   }
   
   .form-group p {
-      font-size: 12px;
+
       color: #777;
       margin-top: 5px;
   }
@@ -144,31 +221,10 @@
       margin-right: 0;
   }
   
-  .terms-and-conditions {
-    margin-top: 20px; /* Adjust margin as needed */
-    text-align: center;
-  }
-  
-  .terms-and-conditions label {
-    font-size: 14px;
-    color: #666; /* Adjust color as needed */
-  }
+
   
   .terms-and-conditions a {
     color: #007bff; /* Adjust link color as needed */
     text-decoration: none;
   }
-  
-  .login-signup-container button{
-    margin: 30px;
-    background-color: #112D4E;
-    color: #ffffff;
-    border-radius: 4px;
-    height: 48px;
-    width: 424px;
-    text-align: center;
-  }
-  
-  
-  /*login-container*/
   
