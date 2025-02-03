@@ -64,7 +64,7 @@
       background-color: #fff;
       padding: 30px;
       border-radius: 10px;
-      width: 800px; /* Adjust width as needed */
+      width: 1000px; /* Adjust width as needed */
       text-align: center;   
   }
   .login-signup-container button{
@@ -85,7 +85,10 @@
     justify-content: center;
     gap: 20px;
 }
-
+.radio-options label{
+  font-size: 14px;
+  font-weight: normal;
+}
 
   .form-group {
       margin-bottom: 20px;
