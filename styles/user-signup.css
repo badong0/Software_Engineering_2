@@ -11,8 +11,8 @@
   .logo {
     font-size: 36px;
     font-weight: bold;
-    color: black; 
-    letter-spacing: 1px; 
+    color: white; 
+    letter-spacing: 2px; 
     font-family: 'poppins';
   }
   .logo span {
@@ -23,14 +23,21 @@
     background-color: #f9fafc;
     color: #333;
     line-height: 1.6;
-      background-image: url(/src/user-background-whole.png);
-      background-repeat: no-repeat;
-      
+  }
+
+  body {
+    margin: 20px;
+    text-align: center;
+    background-position: top center;
+    height: 400px; /* Adjust height to match the background size */
+    background-image: url(/Software_Engineering_2/src/background-half.png);
+    background-repeat: no-repeat;
+    background-position: center; /* Centers the background */
+    background-size: cover; /* Ensures the image covers the full width */
   }
   
   header {
-    height: 95px;
-    background-color: #fff;
+    height: 65px;
     color: black;
     padding: 15px 30px;
     display: flex;
@@ -38,6 +45,7 @@
     align-items: center;
     padding: 30px;
     width: 100%;
+
 }
 /* Centering the Navigation */
 nav {
@@ -48,9 +56,7 @@ nav {
 .container {
   text-align: center;
   width: 100%;
-  
 }
-
 /* Wrapper */
 .wrapper {
   background-color: transparent;
@@ -61,6 +67,7 @@ nav {
 }
 
 .header-buttons {
+  
     list-style: none;
     display: flex;
     justify-content: center;
@@ -77,7 +84,8 @@ nav {
 
 .header-buttons li a {
     text-decoration: none;
-    color: black;
+    color: white;
+    font-weight: bold;
     padding: 5px 0;
 }
 
@@ -124,24 +132,23 @@ nav {
     color: #fff;
   }
   
-  .documents-content .logo,
-  .documents-content h2,
+  .signup-content .logo,
+  .signup-content h2,
   #logo-motto  {
     text-align: center;
     margin-bottom: 10px; 
   }
-  .documents-content {
-    
+  .signup-content {
       background-color: #fff;
       padding: 30px;
       border-radius: 10px;
       width: 800px; /* Adjust width as needed */
       text-align: center;
   }
-  .documents-content button{
+  .signup-content button{
     margin-top: 20px;
   }
-  .documents-content button{
+  .signup-content button{
     margin: 10px;
     background-color: #112D4E;
     color: #ffffff;
@@ -245,7 +252,4 @@ nav {
     width: 424px;
     text-align: center;
   }
-  
-  
-  /*login-container*/
   

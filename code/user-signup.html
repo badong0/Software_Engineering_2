@@ -5,11 +5,10 @@
     <title>DocServe</title>
     <link rel="stylesheet" href="../styles/user-signup.css">
     <script>
-                document.addEventListener("DOMContentLoaded", () => {
+            document.addEventListener("DOMContentLoaded", () => {
             const tabs = document.querySelectorAll(".header-buttons li");
             const sections = {
-                "signup": document.querySelector(".signup-content"),
-                "signin": document.querySelector(".signin-content")
+                "signup": document.querySelector(".signup-content")
             };
 
             tabs.forEach(tab => {
@@ -35,13 +34,13 @@
         });
     </script>
 </head>
-<body style="background-image:url(/Software_Engineering_2/src/user-background-whole.png);">
+<body>
     <header>
-        <div class="logo">DOC<span>SERVE</span></div>
+        <div class="logo">DOCSERVE</div>
         <nav>
             <ul class="header-buttons">
                 <li class="active"><a href="#">Sign Up</a></li>
-                <li><a href="#">Sign in</a></li>
+                <li><a href="/code/user-signin.html">Sign in</a></li>
             </ul>
         </nav>
     </header>
