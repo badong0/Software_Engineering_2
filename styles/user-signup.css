@@ -36,9 +36,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-items: center;
     padding: 30px;
     width: 100%;
+}
+/* Centering the Navigation */
+nav {
+  flex: 1;
+  display:  flex;
+  justify-content: center; /* Centers navigation buttons */
 }
 .container {
   text-align: center;
@@ -52,7 +57,7 @@
   width: 700;
   height: 800px;
   text-align: center;
-  
+  display: flex; justify-content: center; align-items: center;
 }
 
 .header-buttons {
@@ -126,17 +131,12 @@
     margin-bottom: 10px; 
   }
   .documents-content {
+    
       background-color: #fff;
       padding: 30px;
       border-radius: 10px;
-<<<<<<< HEAD
       width: 800px; /* Adjust width as needed */
       text-align: center;
-         
-=======
-      width: 1000px; /* Adjust width as needed */
-      text-align: center;   
->>>>>>> f0076263f12a40781ca6f5a6ea1652cfbdc29887
   }
   .documents-content button{
     margin-top: 20px;
@@ -236,8 +236,6 @@
     text-decoration: none;
   }
   
-<<<<<<< HEAD
-=======
   .login-signup-container button{
     margin: 30px;
     background-color: #112D4E;
@@ -251,4 +249,3 @@
   
   /*login-container*/
   
->>>>>>> f0076263f12a40781ca6f5a6ea1652cfbdc29887
