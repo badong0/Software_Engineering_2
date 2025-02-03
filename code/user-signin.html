@@ -1,0 +1,50 @@
+<?php
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>DocServe</title>
+    <link rel="stylesheet" href="../styles/user-signin.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side (Login Form) -->
+        <div class="left-section">
+            <h2>Welcome Back</h2>
+            <p>Enter your email and password to sign in</p>
+
+            <form action="dashboard.html" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Your password" required>
+                </div>
+
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <button type="submit">SIGN IN</button>
+
+                <p class="signup-text">Don’t have an account? <a href="signup.html">Sign up</a></p>
+            </form>
+        </div>
+
+        <!-- Right Side (Logo Section) -->
+        <div class="right-section">
+            <div class="overlay"></div>
+            <div class="logo">
+                <img src="logo.png" alt="DocServe Logo">
+                <h1>DOCSERVE</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

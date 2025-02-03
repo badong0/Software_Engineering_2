@@ -1,0 +1,140 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Left Section */
+.left-section {
+    width: 50%;
+    background: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.left-section p {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #112D4E;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0d253f;
+}
+
+/* Signup Text */
+.signup-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Right Section */
+.right-section {
+    width: 50%;
+    background-color: #112D4E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.right-section .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/src/Background-signin-signup.png') no-repeat center;
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.right-section .logo {
+    position: absolute;
+    text-align: center;
+    color: white;
+}
+
+.right-section .logo img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.right-section .logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+}

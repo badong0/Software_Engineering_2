@@ -1,132 +1,174 @@
-/* General Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-
-body {
+  
+  /*Reusable code for the DOCSERVE LOGO design*/
+  .logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: black; 
+    letter-spacing: 1px; 
+    font-family: 'poppins';
+  }
+  .logo span {
+    color: #3F72AF; 
+  }
+  
+  body {
+      font-family: "inter";
+      background-color: #f0f0f0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url(/src/Background-signin-signup.png);
+  }
+  
+  
+  /*Button Sign in sign up sa taas */
+  .button-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f5f7fa;
-}
-
-/* Signup Container */
-.signup-container {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
-    overflow: hidden;
-    text-align: center;
-}
-
-.banner {
-    background: #112D4E;
-    color: white;
-    padding: 20px;
-}
-
-.banner h1 {
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.banner p {
-    font-size: 14px;
-}
-
-.signup-form {
-    padding: 30px;
-}
-
-.form-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.form-header button,
-.form-header a {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: #112D4E;
-    border: none;
-    background: transparent;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.form-header .active {
-    border-bottom: 3px solid #3F72AF;
-    color: #3F72AF;
-}
-
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.form-group label {
+  }
+  
+  .button-container a {
     display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #333;
     border-radius: 5px;
-    font-size: 14px;
-    background-color: #f8f9fa;
+    width: 175px;
+  }
+  
+  .button-container a:hover {
+    background-color: #eee;
+  }
+  
+  .button-container a.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /*containers*/
+  .login-signup-container .logo,
+  .login-signup-container h2,
+  #logo-motto  {
+    text-align: center;
+    margin-bottom: 10px; 
+  }
+  .login-signup-container {
+      background-color: transparent;
+      padding: 30px;
+      border-radius: 5px;
+      width: 800px; /* Adjust width as needed */
+      text-align: center;   
+  }
+  .login-signup-container button{
+    margin-top: 20px;
+  }
+/* Radio Button Group Styling */
+/* Radio Button Groups */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
 }
 
-.terms {
+.radio-options {
     display: flex;
     align-items: center;
-    font-size: 12px;
-    text-align: left;
-    margin-top: 10px;
+    justify-content: center;
+    gap: 20px;
 }
 
-.terms input {
-    margin-right: 10px;
-}
 
-.terms a {
-    color: #3F72AF;
-    text-decoration: none;
+  .form-group {
+      margin-bottom: 20px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="password"],
+  .form-group input[type="email"],
+  .form-group input[type="number"],
+  .form-group input[type="date"],
+  .form-group #gender {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background-color: #EDF2F7;
+  }
+  
+  .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      appearance: none; /* Remove default arrow */
+      -webkit-appearance: none; /* For Safari */
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 16 16'><path fill='%23333' d='M4 7 L8 11 L12 7 z'/><path fill='none' stroke='%23333' stroke-width='1' d='M2 7 L14 7'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+  }
+  
+  .form-group p {
+      font-size: 12px;
+      color: #777;
+      margin-top: 5px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
 }
-
-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #3F72AF;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-button:hover {
-    background: #294b6e;
-}
-
-.login-link {
-    margin-top: 15px;
+  
+  .form-row {
+      display: flex;
+      justify-content: space-between;
+      text-align: start;
+      margin-bottom: 20px;
+  }
+  
+  .form-row .form-group {
+      flex: 1;
+      margin-right: 20px;
+  }
+  
+  .form-row .form-group:last-child {
+      margin-right: 0;
+  }
+  
+  .terms-and-conditions {
+    margin-top: 20px; /* Adjust margin as needed */
+    text-align: center;
+  }
+  
+  .terms-and-conditions label {
     font-size: 14px;
-}
-
-.login-link a {
-    color: #3F72AF;
+    color: #666; /* Adjust color as needed */
+  }
+  
+  .terms-and-conditions a {
+    color: #007bff; /* Adjust link color as needed */
     text-decoration: none;
-    font-weight: bold;
-}
+  }
+  
+  .login-signup-container button{
+    margin: 30px;
+    background-color: #112D4E;
+    color: #ffffff;
+    border-radius: 4px;
+    height: 48px;
+    width: 424px;
+    text-align: center;
+  }
+  
+  
+  /*login-container*/
+  

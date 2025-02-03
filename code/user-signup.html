@@ -3,18 +3,20 @@
 <head>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>DocServe</title>
-    <link rel="stylesheet" href="../styles/signup-style.css">
+    <link rel="stylesheet" href="../styles/user-signup.css">
 </head>
 <body style="background-image: url(/src/Background-signin-signup.png); background-repeat: no-repeat;">
     <div class="login-signup-container">
-        <div class="logo">DOC<span>SERVE</span></div>
-        <h2>Create Account</h2>
-        <p id="logo-motto">Let's set you up! Fill in the details below to get started.</p>
-        
         <div class="button-container">
             <a href="signin.html">Sign In</a>
             <a href="signup.html" class="active">Sign Up</a>
         </div>
+        
+        <div class="logo">DOC<span>SERVE</span></div>
+        <h2>Create Account</h2>
+        <p id="logo-motto">Let's set you up! Fill in the details below to get started.</p>
+        
+
 
         <!-- Start of the form -->
         <form action="/phpcode/" method="POST">
@@ -70,21 +72,23 @@
                 </div>
                 <div class="form-group">
                     <label>Gender</label>
-                    <input type="radio" id="male" name="gender" value="Male" required>
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="Female" required>
-                    <label for="female">Female</label>
+                    <div class="radio-options">
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        <label for="female">Female</label>
+                    </div>
                 </div>
-                <div class="user-category">
+                <div class="form-group">
                     <label>User Category</label>
-                    <input type="radio" id="student" name="user_category" value="Student" required>
-                    <label for="student">Student</label>
-    
-                    <input type="radio" id="employee" name="user_category" value="Employee" required>
-                    <label for="employee">Employee</label>
-    
-                    <input type="radio" id="non-employee" name="user_category" value="Non-Employee" required>
-                    <label for="non-employee">Non-Employee</label>
+                    <div class="radio-options">
+                        <input type="radio" id="student" name="user_category" value="Student" required>
+                        <label for="student">Student</label>
+                        <input type="radio" id="employee" name="user_category" value="Employee" required>
+                        <label for="employee">Employee</label>
+                        <input type="radio" id="non-employee" name="user_category" value="Non-Employee" required>
+                        <label for="non-employee">Non-Employee</label>
+                    </div>
                 </div>
             </div>
 
@@ -104,6 +108,7 @@
             <button type="submit">Submit</button>
         </form>
         <!-- End of the form -->
+         <h3>Already have an account? <a href="/code/user-signin.html">Sign in</a></h3>
     </div>
 </body>
 </html>
